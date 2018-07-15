@@ -1,0 +1,16 @@
+<!-- Headline app v.01 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Headlines</title>
+</head>
+<body>
+	<h1>Headline</h1>
+		{% for article in articles %}
+			<b><a href="{{ article.link }}">{{ article.title }}</a></b><br />
+			<i>{{ article.Published }}</i><br />
+			<p>{{ article.Summary }}</p>
+			<hr />
+		{% endfor %}
+</body>
+</html>

@@ -13,8 +13,8 @@
 	</form>
 		{% for article in articles %}
 			<b><a href="{{ article.link }}">{{ article.title }}</a></b><br />
-			<i>{{ article.Published }}</i><br />
-			<p>{{ article.Summary }}</p>
+			<i>{{ article.published }}</i><br />
+			<p>{{ article.summary }}</p>
 			<hr />
 		{% endfor %}
 </body>

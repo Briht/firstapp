@@ -3,6 +3,18 @@
 <html>
 <head>
 	<title>Headlines</title>
+	<style type="text/css">
+		.head_link{
+			text-decoration: none;
+			color: lightgray;
+			background-color: steelblue;
+			padding: 4px 2px;
+			border-radius: 4px;
+		}
+		.articles_text{
+			margin-top: 5px;
+		}
+	</style>
 </head>
 <body>
 	<h1>Headline</h1>
@@ -12,9 +24,11 @@
 		<input type="submit" value="Submit">
 	</form>
 		{% for article in articles %}
-			<b><a href="{{ article.link }}">{{ article.title }}</a></b><br />
-			<i>{{ article.published }}</i><br />
-			<p>{{ article.summary }}</p>
+			<b><a class="head_link" href="{{ article.link }}">{{ article.title }}</a></b><br />
+			<div class="articles_text">
+				<i>{{ article.published }}</i><br />
+				<p>{{ article.summary }}</p>
+			</div>
 			<hr />
 		{% endfor %}
 </body>
